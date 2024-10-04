@@ -13,9 +13,10 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
 }
 
 h1,
@@ -35,4 +36,243 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  align-items: flex-end;
+  display: flex;
+  margin: auto;
+  gap: 30px;
+  inline-size: 1140px;
+}
+
+.result__video-container {
+  width: 711px;
+  position: relative;
+}
+
+.result__video {
+  width: 711px;
+  height: 386px;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.search-form__fieldset {
+  border: none;
+  gap: 30px;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  padding: 1px 0 3px;
+  font-weight: 100;
+}
+
+.search-form__label {
+  display: inline;
+  width: fit-content;
+  font-family: inherit;
+  color: inherit;
+}
+
+input {
+  background-color: transparent;
+  border: solid #ffffff 1px;
+  border-right: transparent;
+  border-left: transparent;
+  padding: 3px 18px 1px 0px;
+  font-size: 16px;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-form__label:not(:last-of-type) {
+  margin-right: 9px;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: #fff solid 1px;
+}
+
+.search-form__label:has(.search-form__pseudo-checkbox):hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.search-form__label-text {
+  appearance: none;
+  padding-top: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__checkbox-list {
+  display: inline;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  vertical-align: middle;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  display: flex;
+  background-size: contain;
+  position: center;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  align-self: center;
+  margin: 1px;
+}
+
+.button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ffffff;
+  padding: 7px 0px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.button:focus-visible {
+  outline: #ffffff colid 1px;
+  outline-offset: -3px;
+}
+
+.search-form__submit-button {
+  width: 27%;
+  align-self: flex-end;
+}
+
+.content__details {
+  padding: 1px;
+  height: 534px;
+  width: 399px;
+}
+
+.title {
+  font-size: 75px;
+  line-height: 70px;
+  padding: 5px 0 22px 0;
+  text-transform: uppercase;
+  font-family: "oswald", sans-serif;
+}
+
+.content__accent {
+  color: rgb(255 255 255 / 0.25);
+}
+
+.content__list {
+  overflow: auto;
+  height: 298px;
+  position: relative;
+  width: 399px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__card-link:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2px;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: #fff solid 1px;
+}
+
+.content__video-card:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content__video-card-description-container {
+  width: 200px;
+}
+
+.content__video-card-title {
+  text-transform: uppercase;
+  font-family: "oswald", sans-serif;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px;
+}
+
+.content__video-card-title:hover {
+  text-decoration-thickness: 2px;
+}
+
+.content__video-card-description {
+  width: 200px;
+}
+
+.content__video-card-description:hover {
+  text-decoration-thickness: 1px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
