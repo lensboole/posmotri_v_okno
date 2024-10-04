@@ -49,8 +49,7 @@ ol {
 .result__video-container {
   width: 711px;
   position: relative;
-  height: 386px; 
-  
+  height: 386px;
 }
 
 .result__video {
@@ -81,7 +80,6 @@ ol {
 .search-form__label {
   display: inline;
   width: fit-content;
-  font-family: inherit;
 }
 
 input {
@@ -89,10 +87,10 @@ input {
   border: solid #ffffff 1px;
   border-right: transparent;
   border-left: transparent;
-  padding: 3px 18px 1px 0px;
+  padding: 3px 58px 1px 0px;
   font-size: 16px;
   color: #fff;
-  
+  font-family: inherit;
   appearance: none;
 }
 
@@ -112,7 +110,7 @@ input::placeholder {
   border: #fff solid 1px;
 }
 
- .search-form__label:hover .search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -154,7 +152,7 @@ input::placeholder {
   align-self: center;
   margin: 1px;
 }
- 
+
 .button:focus {
   outline: none;
 }
@@ -191,7 +189,7 @@ input::placeholder {
 
 .content__details {
   padding: 1px;
-  
+
   width: 399px;
 }
 
@@ -212,7 +210,6 @@ input::placeholder {
   height: 298px;
   position: relative;
   width: 399px;
-  
 }
 
 .content__list-item:not(:last-of-type) {
@@ -234,7 +231,7 @@ input::placeholder {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin:2px;
+  margin: 2px;
 }
 
 .content__card-link:hover {
@@ -283,5 +280,5 @@ input::placeholder {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit:cover
+  object-fit: cover;
 }
