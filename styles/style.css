@@ -49,12 +49,14 @@ ol {
 .result__video-container {
   width: 711px;
   position: relative;
+  height: 386px; 
+  
 }
 
 .result__video {
   width: 711px;
-  height: 386px;
   object-fit: cover;
+  height: 100%;
 }
 
 .search-form {
@@ -62,7 +64,7 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 10px;
+  margin-top: 17px;
 }
 
 .search-form__fieldset {
@@ -73,14 +75,13 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   padding: 1px 0 3px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .search-form__label {
   display: inline;
   width: fit-content;
   font-family: inherit;
-  color: inherit;
 }
 
 input {
@@ -91,6 +92,8 @@ input {
   padding: 3px 18px 1px 0px;
   font-size: 16px;
   color: #fff;
+  
+  appearance: none;
 }
 
 input:focus {
@@ -98,7 +101,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__label:not(:last-of-type) {
@@ -109,7 +112,7 @@ input::placeholder {
   border: #fff solid 1px;
 }
 
-.search-form__label:has(.search-form__pseudo-checkbox):hover {
+ .search-form__label:hover .search-form__label-text:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -145,27 +148,30 @@ input::placeholder {
   content: "";
   display: flex;
   background-size: contain;
-  position: center;
   width: 15px;
   height: 15px;
   background-color: #ffffff;
   align-self: center;
   margin: 1px;
 }
-
+ 
+.button:focus {
+  outline: none;
+}
 .button {
   background-color: transparent;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   border: 1px solid #ffffff;
-  padding: 7px 0px;
+  padding: 6px 0px;
   font-weight: 700;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .button:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #545050;
 }
 
 .button:hover {
@@ -174,7 +180,7 @@ input::placeholder {
 }
 
 .button:focus-visible {
-  outline: #ffffff colid 1px;
+  outline: #ffffff solid 1px;
   outline-offset: -3px;
 }
 
@@ -185,7 +191,7 @@ input::placeholder {
 
 .content__details {
   padding: 1px;
-  height: 534px;
+  
   width: 399px;
 }
 
@@ -198,7 +204,7 @@ input::placeholder {
 }
 
 .content__accent {
-  color: rgb(255 255 255 / 0.25);
+  color: #545050;
 }
 
 .content__list {
@@ -206,6 +212,7 @@ input::placeholder {
   height: 298px;
   position: relative;
   width: 399px;
+  
 }
 
 .content__list-item:not(:last-of-type) {
@@ -213,12 +220,13 @@ input::placeholder {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
 }
 
 .content__card-link:active {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #545050;
 }
 
 .content__video-card {
@@ -226,28 +234,28 @@ input::placeholder {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2px;
+  margin:2px;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: #fff solid 1px;
 }
 
-.content__video-card:active {
-  background-color: rgba(255, 255, 255, 0.2);
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card-description-container {
-  width: 200px;
+  min-width: 0;
 }
 
 .content__video-card-title {
@@ -275,4 +283,5 @@ input::placeholder {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit:cover
 }
